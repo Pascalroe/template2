@@ -185,6 +185,11 @@ p {
   padding: 15px 0;
 }
 
+/* Hide on Scroll - Navbar ausgeblendet */
+.nav.hidden {
+  transform: translateY(-100%);
+}
+
 .nav-inner {
   display: flex;
   justify-content: space-between;

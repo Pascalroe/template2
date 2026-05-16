@@ -6,15 +6,44 @@ document.addEventListener('DOMContentLoaded', function() {
   // Navigation scroll effect
   const nav = document.querySelector('.nav');
   
+  // Hide on Scroll - Variablen
+  let lastScrollY = 0;
+  let ticking = false;
+  
   function handleScroll() {
-    if (window.scrollY > 50) {
+    const currentScrollY = window.scrollY;
+    
+    // Grundlegende scroll Klasse (für Hintergrund)
+    if (currentScrollY > 50) {
       nav.classList.add('scrolled');
     } else {
       nav.classList.remove('scrolled');
     }
+    
+    // Hide on Scroll Logik
+    if (currentScrollY > 0) {
+      if (currentScrollY > lastScrollY) {
+        // Nach unten scrollen → Navbar ausblenden
+        nav.classList.add('hidden');
+      } else {
+        // Nach oben scrollen → Navbar einblenden
+        nav.classList.remove('hidden');
+      }
+    } else {
+      // Ganz oben → Navbar immer sichtbar
+      nav.classList.remove('hidden');
+    }
+    
+    lastScrollY = currentScrollY;
+    ticking = false;
   }
   
-  window.addEventListener('scroll', handleScroll);
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(handleScroll);
+      ticking = true;
+    }
+  });
   handleScroll();
   
   // Mobile navigation toggle
