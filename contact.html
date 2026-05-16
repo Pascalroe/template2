@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt | ÉTOILE Fine Dining</title>
+  <meta name="description" content="Kontaktieren Sie ÉTOILE - wir freuen uns auf Ihre Anfrage. Telefon, E-Mail oder persönlich.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav scrolled">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">ÉTOI<span>LE</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menü</a></li>
+          <li><a href="about.html">Über uns</a></li>
+          <li><a href="gallery.html">Galerie</a></li>
+          <li><a href="reservation.html">Reservierung</a></li>
+          <li><a href="contact.html" class="active">Kontakt</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="reservation.html" class="btn btn-outline-light">Tisch reservieren</a>
+          <button class="nav-toggle" aria-label="Menü öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?w=1920&q=80" alt="Kontakt">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="page-hero-content">
+      <span class="hero-subtitle">Kommunikation</span>
+      <h1 class="page-hero-title">Kontakt</h1>
+    </div>
+  </section>
+
+  <!-- Contact Page -->
+  <section class="contact-page">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <span class="signature-label fade-in">Kontakt</span>
+          <h2 class="fade-in stagger-1">Wir freuen uns auf Sie</h2>
+          <p class="fade-in stagger-2" style="color: var(--color-charcoal); margin-bottom: 40px;">
+            Haben Sie Fragen zu unserer Küche, möchten Sie eine private Veranstaltung 
+            planen oder simply mehr über ÉTOILE erfahren? Wir freuen uns auf Ihre Nachricht.
+          </p>
+
+          <div class="contact-item fade-in stagger-3">
+            <span class="contact-label">Adresse</span>
+            <p class="contact-value">
+              Luxemburger Straße 42<br>
+              10117 Berlin
+            </p>
+          </div>
+
+          <div class="contact-item fade-in stagger-4">
+            <span class="contact-label">Telefon</span>
+            <p class="contact-value">+49 30 12345678</p>
+          </div>
+
+          <div class="contact-item fade-in stagger-5">
+            <span class="contact-label">E-Mail</span>
+            <p class="contact-value">reservierung@etoile.de</p>
+          </div>
+
+          <div class="contact-item fade-in">
+            <span class="contact-label">Social Media</span>
+            <div class="footer-social" style="margin-top: 15px;">
+              <a href="#" aria-label="Instagram" style="border-color: var(--color-charcoal); color: var(--color-charcoal);">IG</a>
+              <a href="#" aria-label="Facebook" style="border-color: var(--color-charcoal); color: var(--color-charcoal);">FB</a>
+              <a href="#" aria-label="Twitter" style="border-color: var(--color-charcoal); color: var(--color-charcoal);">X</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-container fade-in">
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="name">Name *</label>
+              <input type="text" id="name" name="name" class="form-input" style="background-color: #fff; border-color: #ddd;" placeholder="Ihr Name" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">E-Mail *</label>
+              <input type="email" id="email" name="email" class="form-input" style="background-color: #fff; border-color: #ddd;" placeholder="ihre@email.de" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="subject">Betreff</label>
+              <select id="subject" name="subject" class="form-select" style="background-color: #fff; border-color: #ddd;">
+                <option value="">Betreff auswählen</option>
+                <option value="reservation">Reservierung</option>
+                <option value="event">Private Veranstaltung</option>
+                <option value="feedback">Feedback</option>
+                <option value="press">Presseanfrage</option>
+                <option value="other">Sonstiges</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Nachricht *</label>
+              <textarea id="message" name="message" class="form-textarea" style="background-color: #fff; border-color: #ddd;" rows="6" placeholder="Ihre Nachricht an uns..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">Nachricht senden</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="fade-in" style="margin-top: 80px;">
+        <div class="section-header">
+          <span class="section-label">Standort</span>
+          <h2 class="section-title">So finden Sie uns</h2>
+        </div>
+        <div class="contact-map">
+          <div style="text-align: center;">
+            <p style="color: var(--color-cream); font-size: 1.2rem; margin-bottom: 10px;">ÉTOILE Restaurant</p>
+            <p style="color: var(--color-gray);">Luxemburger Straße 42, 10117 Berlin</p>
+            <p style="color: var(--color-gray); font-size: 0.9rem; margin-top: 20px;">(Karte wird in Produktion eingebunden)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-logo">ÉTOI<span>LE</span></div>
+          <p class="footer-desc">
+            Wo kulinarische Kunst auf zeitlose Eleganz trifft. Wir freuen 
+            uns darauf, Sie in unserem Restaurant willkommen zu heißen.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-title">Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menü</a></li>
+            <li><a href="about.html">Über uns</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-title">Information</h4>
+          <ul>
+            <li><a href="reservation.html">Reservierung</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="#">Datenschutz</a></li>
+            <li><a href="#">Impressum</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 class="footer-title">Kontakt</h4>
+          <p>Luxemburger Straße 42<br>10117 Berlin</p>
+          <p>+49 30 12345678</p>
+          <p>reservierung@etoile.de</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2024 ÉTOILE Restaurant. Alle Rechte vorbehalten.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">X</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

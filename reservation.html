@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reservierung | ÉTOILE Fine Dining</title>
+  <meta name="description" content="Reservieren Sie Ihren Tisch bei ÉTOILE - dem exklusiven Fine Dining Restaurant in Berlin.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭐</text></svg>">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav scrolled">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-logo">ÉTOI<span>LE</span></a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menü</a></li>
+          <li><a href="about.html">Über uns</a></li>
+          <li><a href="gallery.html">Galerie</a></li>
+          <li><a href="reservation.html" class="active">Reservierung</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+        <div class="nav-cta">
+          <a href="reservation.html" class="btn btn-outline-light">Tisch reservieren</a>
+          <button class="nav-toggle" aria-label="Menü öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=1920&q=80" alt="Reservierung">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="page-hero-content">
+      <span class="hero-subtitle">Ihre Buchung</span>
+      <h1 class="page-hero-title">Reservierung</h1>
+    </div>
+  </section>
+
+  <!-- Reservation Page -->
+  <section class="reservation-page">
+    <div class="container">
+      <div class="reservation-container">
+        <div class="section-header" style="margin-bottom: 60px;">
+          <span class="section-label">Online Buchung</span>
+          <h2 class="section-title" style="color: var(--color-cream);">Einen Tisch reservieren</h2>
+          <p class="section-desc" style="color: var(--color-gray);">
+            Füllen Sie das Formular aus und wir bestätigen Ihre Reservierung innerhalb von 24 Stunden.
+          </p>
+        </div>
+
+        <div class="reservation-form fade-in">
+          <form id="reservation-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="name">Name *</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Ihr vollständiger Name" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">E-Mail *</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="ihre@email.de" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="phone">Telefon *</label>
+                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+49 123 456789" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="guests">Anzahl der Gäste *</label>
+                <select id="guests" name="guests" class="form-select" required>
+                  <option value="">Gäste auswählen</option>
+                  <option value="1">1 Person</option>
+                  <option value="2">2 Personen</option>
+                  <option value="3">3 Personen</option>
+                  <option value="4">4 Personen</option>
+                  <option value="5">5 Personen</option>
+                  <option value="6">6 Personen</option>
+                  <option value="7">7 Personen</option>
+                  <option value="8">8 Personen</option>
+                  <option value="more">Mehr als 8 (bitte anrufen)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="date">Datum *</label>
+                <input type="date" id="date" name="date" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="time">Uhrzeit *</label>
+                <select id="time" name="time" class="form-select" required>
+                  <option value="">Uhrzeit auswählen</option>
+                  <option value="17:00">17:00</option>
+                  <option value="17:30">17:30</option>
+                  <option value="18:00">18:00</option>
+                  <option value="18:30">18:30</option>
+                  <option value="19:00">19:00</option>
+                  <option value="19:30">19:30</option>
+                  <option value="20:00">20:00</option>
+                  <option value="20:30">20:30</option>
+                  <option value="21:00">21:00</option>
+                  <option value="21:30">21:30</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="occasion">Anlass</label>
+              <select id="occasion" name="occasion" class="form-select">
+                <option value="">Anlass auswählen (optional)</option>
+                <option value="birthday">Geburtstag</option>
+                <option value="anniversary">Jubiläum</option>
+                <option value="business">Geschäftsessen</option>
+                <option value="date">Romantisches Dinner</option>
+                <option value="other">Sonstiges</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="diet">Ernährungseinschränkungen</label>
+              <select id="diet" name="diet" class="form-select">
+                <option value="">Keine (optional)</option>
+                <option value="vegetarian">Vegetarisch</option>
+                <option value="vegan">Vegan</option>
+                <option value="gluten">Glutenfrei</option>
+                <option value="lactose">Laktosefrei</option>
+                <option value="allergy">Andere Allergien</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="message">Besondere Wünsche</label>
+              <textarea id="message" name="message" class="form-textarea" rows="4" placeholder="Haben Sie besondere Wünsche oder Anmerkungen?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary form-submit">Reservierung anfragen</button>
+          </form>
+        </div>
+
+        <div class="reservation-info fade-in">
+          <p style="color: var(--color-gray);">
+            Für Reservierungen von mehr als 8 Personen oder spezielle Anfragen<br>
+            kontaktieren Sie uns bitte direkt unter <strong style="color: var(--color-gold);">+49 30 12345678</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info Section -->
+  <section class="section" style="background-color: var(--color-cream);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Information</span>
+        <h2 class="section-title">Öffnungszeiten</h2>
+      </div>
+      <div class="menu-grid" style="grid-template-columns: repeat(3, 1fr); max-width: 900px; margin: 0 auto;">
+        <div class="menu-category fade-in" style="text-align: center; border: none;">
+          <h3 class="menu-category-title" style="border: none; font-size: 1.4rem;">Mittagessen</h3>
+          <p style="color: var(--color-gray); margin-top: 15px;">Dienstag - Freitag</p>
+          <p style="color: var(--color-charcoal); font-size: 1.1rem; margin-top: 10px;">12:00 - 14:30</p>
+        </div>
+        <div class="menu-category fade-in stagger-1" style="text-align: center; border: none;">
+          <h3 class="menu-category-title" style="border: none; font-size: 1.4rem;">Abendessen</h3>
+          <p style="color: var(--color-gray); margin-top: 15px;">Dienstag - Samstag</p>
+          <p style="color: var(--color-charcoal); font-size: 1.1rem; margin-top: 10px;">18:00 - 23:00</p>
+        </div>
+        <div class="menu-category fade-in stagger-2" style="text-align: center; border: none;">
+          <h3 class="menu-category-title" style="border: none; font-size: 1.4rem;">Ruhetag</h3>
+          <p style="color: var(--color-gray); margin-top: 15px;">Sonntag & Montag</p>
+          <p style="color: var(--color-charcoal); font-size: 1.1rem; margin-top: 10px;">Geschlossen</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="footer-logo">ÉTOI<span>LE</span></div>
+          <p class="footer-desc">
+            Wo kulinarische Kunst auf zeitlose Eleganz trifft. Wir freuen 
+            uns darauf, Sie in unserem Restaurant willkommen zu heißen.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-title">Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menü</a></li>
+            <li><a href="about.html">Über uns</a></li>
+            <li><a href="gallery.html">Galerie</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4 class="footer-title">Information</h4>
+          <ul>
+            <li><a href="reservation.html">Reservierung</a></li>
+            <li><a href="contact.html">Kontakt</a></li>
+            <li><a href="#">Datenschutz</a></li>
+            <li><a href="#">Impressum</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4 class="footer-title">Kontakt</h4>
+          <p>Luxemburger Straße 42<br>10117 Berlin</p>
+          <p>+49 30 12345678</p>
+          <p>reservierung@etoile.de</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2024 ÉTOILE Restaurant. Alle Rechte vorbehalten.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Twitter">X</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
