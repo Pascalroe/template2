@@ -1183,12 +1183,81 @@ p {
     --container-padding: 20px;
   }
   
-  .nav-links {
-    display: none;
+  /* Navigation */
+  .nav {
+    padding: 15px 0;
   }
   
+  .nav.scrolled {
+    padding: 12px 0;
+  }
+  
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background-color: var(--color-charcoal);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: var(--transition-medium);
+    z-index: 999;
+    padding: 40px;
+  }
+  
+  .nav-links.active {
+    right: 0;
+  }
+  
+  .nav-links a {
+    font-size: 1.1rem;
+    padding: 15px 0;
+  }
+  
+  /* Mobile menu overlay */
+  .nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition-medium);
+    z-index: 998;
+  }
+  
+  .nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Burger menu animation */
   .nav-toggle {
     display: flex;
+    z-index: 1000;
+  }
+  
+  .nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  /* Hide CTA button on mobile */
+  .nav-cta .btn {
+    display: none;
   }
   
   .signature-grid,
