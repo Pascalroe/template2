@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" id="html-root">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,15 +18,20 @@
       <div class="nav-inner">
         <a href="index.html" class="nav-logo">ÉTOI<span>LE</span></a>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="menu.html" class="active">Menü</a></li>
-          <li><a href="about.html">Über uns</a></li>
-          <li><a href="gallery.html">Galerie</a></li>
-          <li><a href="reservation.html">Reservierung</a></li>
-          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="menu.html" class="active" data-i18n="nav.menu">Menü</a></li>
+          <li><a href="about.html" data-i18n="nav.about">Über uns</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Galerie</a></li>
+          <li><a href="reservation.html" data-i18n="nav.reservation">Reservierung</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
         </ul>
         <div class="nav-cta">
-          <a href="reservation.html" class="btn btn-outline-light">Tisch reservieren</a>
+          <a href="reservation.html" class="btn btn-outline-light" data-i18n="nav.reserve">Tisch reservieren</a>
+          <div id="lang-toggle" class="lang-switcher">
+            <span class="lang-de active">DE</span>
+            <span class="lang-sep">|</span>
+            <span class="lang-en">EN</span>
+          </div>
           <button class="nav-toggle" aria-label="Menü öffnen">
             <span></span>
             <span></span>
@@ -44,8 +49,8 @@
       <div class="hero-overlay"></div>
     </div>
     <div class="page-hero-content">
-      <span class="hero-subtitle">Kulinarik</span>
-      <h1 class="page-hero-title">Unser Menü</h1>
+      <span class="hero-subtitle" data-i18n="menu.heroSubtitle">Kulinarik</span>
+      <h1 class="page-hero-title" data-i18n="menu.heroTitle">Unser Menü</h1>
     </div>
   </section>
 
@@ -54,167 +59,167 @@
     <div class="menu-full">
       <div class="container">
         <!-- Starters -->
-        <h2 class="menu-section-title fade-in">Vorspeisen</h2>
+        <h2 class="menu-section-title fade-in" data-i18n="menu.starters">Vorspeisen</h2>
         <div class="menu-list">
           <div class="menu-list-item fade-in">
             <div>
-              <h3 class="menu-list-name">Tatar vom Wagyu-Rind</h3>
-              <p class="menu-list-desc">Mit schwarzem Trüffel aus Alba, perfekt gewürzt mit Meersalz und Olivenöl</p>
+              <h3 class="menu-list-name" data-i18n="menu.starter1.name">Tatar vom Wagyu-Rind</h3>
+              <p class="menu-list-desc" data-i18n="menu.starter1.desc">Mit schwarzem Trüffel aus Alba, perfekt gewürzt mit Meersalz und Olivenöl</p>
             </div>
             <span class="menu-list-price">€32</span>
           </div>
           <div class="menu-list-item fade-in stagger-1">
             <div>
-              <h3 class="menu-list-name">Foie Gras Terrine</h3>
-              <p class="menu-list-desc">Hausgemacht mit Feigenkompott und geröstetem Brioche</p>
+              <h3 class="menu-list-name" data-i18n="menu.starter2.name">Foie Gras Terrine</h3>
+              <p class="menu-list-desc" data-i18n="menu.starter2.desc">Hausgemacht mit Feigenkompott und geröstetem Brioche</p>
             </div>
             <span class="menu-list-price">€28</span>
           </div>
           <div class="menu-list-item fade-in stagger-2">
             <div>
-              <h3 class="menu-list-name">Saint-Jacques Pilaf</h3>
-              <p class="menu-list-desc">Jakobsmuscheln in Safranrisotto mit Erbsen und Minze</p>
+              <h3 class="menu-list-name" data-i18n="menu.starter3.name">Saint-Jacques Pilaf</h3>
+              <p class="menu-list-desc" data-i18n="menu.starter3.desc">Jakobsmuscheln in Safranrisotto mit Erbsen und Minze</p>
             </div>
             <span class="menu-list-price">€34</span>
           </div>
           <div class="menu-list-item fade-in stagger-3">
             <div>
-              <h3 class="menu-list-name">Burrata mit Tomaten</h3>
-              <p class="menu-list-desc">Mit Basilikum-Pesto, Balsamico-Reduktion und gerösteten Pinienkernen</p>
+              <h3 class="menu-list-name" data-i18n="menu.starter4.name">Burrata mit Tomaten</h3>
+              <p class="menu-list-desc" data-i18n="menu.starter4.desc">Mit Basilikum-Pesto, Balsamico-Reduktion und gerösteten Pinienkernen</p>
             </div>
             <span class="menu-list-price">€24</span>
           </div>
           <div class="menu-list-item fade-in stagger-4">
             <div>
-              <h3 class="menu-list-name">Carpaccio vom Rind</h3>
-              <p class="menu-list-desc">Mit Rucola, Parmesan und Trüffel-Mayonnaise</p>
+              <h3 class="menu-list-name" data-i18n="menu.starter5.name">Carpaccio vom Rind</h3>
+              <p class="menu-list-desc" data-i18n="menu.starter5.desc">Mit Rucola, Parmesan und Trüffel-Mayonnaise</p>
             </div>
             <span class="menu-list-price">€26</span>
           </div>
         </div>
 
         <!-- Main Courses -->
-        <h2 class="menu-section-title fade-in" style="margin-top: 80px;">Hauptgerichte</h2>
+        <h2 class="menu-section-title fade-in" data-i18n="menu.mains" style="margin-top: 80px;">Hauptgerichte</h2>
         <div class="menu-list">
           <div class="menu-list-item fade-in">
             <div>
-              <h3 class="menu-list-name">Loup de Mer</h3>
-              <p class="menu-list-desc">Im Ofen gebraten mit Safranfenchel, Zitrusbutter und neuen Kartoffeln</p>
+              <h3 class="menu-list-name" data-i18n="menu.main1.name">Loup de Mer</h3>
+              <p class="menu-list-desc" data-i18n="menu.main1.desc">Im Ofen gebraten mit Safranfenchel, Zitrusbutter und neuen Kartoffeln</p>
             </div>
             <span class="menu-list-price">€58</span>
           </div>
           <div class="menu-list-item fade-in stagger-1">
             <div>
-              <h3 class="menu-list-name">Rochenflügel</h3>
-              <p class="menu-list-desc">Mit brauner Butter, Kapern, Zitrone und Petersilienwurzel</p>
+              <h3 class="menu-list-name" data-i18n="menu.main2.name">Rochenflügel</h3>
+              <p class="menu-list-desc" data-i18n="menu.main2.desc">Mit brauner Butter, Kapern, Zitrone und Petersilienwurzel</p>
             </div>
             <span class="menu-list-price">€65</span>
           </div>
           <div class="menu-list-item fade-in stagger-2">
             <div>
-              <h3 class="menu-list-name">Rehrücken</h3>
-              <p class="menu-list-desc">Mit Preiselbeerjus, Rotkohl und hausgemachten Serviettenknödel</p>
+              <h3 class="menu-list-name" data-i18n="menu.main3.name">Rehrücken</h3>
+              <p class="menu-list-desc" data-i18n="menu.main3.desc">Mit Preiselbeerjus, Rotkohl und hausgemachten Serviettenknödel</p>
             </div>
             <span class="menu-list-price">€72</span>
           </div>
           <div class="menu-list-item fade-in stagger-3">
             <div>
-              <h3 class="menu-list-name">Taubenbrust</h3>
-              <p class="menu-list-desc">Rosa gebraten mit Kirschenjus, Selleriepüree und Speckbohnen</p>
+              <h3 class="menu-list-name" data-i18n="menu.main4.name">Taubenbrust</h3>
+              <p class="menu-list-desc" data-i18n="menu.main4.desc">Rosa gebraten mit Kirschenjus, Selleriepüree und Speckbohnen</p>
             </div>
             <span class="menu-list-price">€68</span>
           </div>
           <div class="menu-list-item fade-in stagger-4">
             <div>
-              <h3 class="menu-list-name">Kalbsbries</h3>
-              <p class="menu-list-desc">Mit Steinpilzen, Trüffelbutter und Maccaroni gratiniert</p>
+              <h3 class="menu-list-name" data-i18n="menu.main5.name">Kalbsbries</h3>
+              <p class="menu-list-desc" data-i18n="menu.main5.desc">Mit Steinpilzen, Trüffelbutter und Maccaroni gratiniert</p>
             </div>
             <span class="menu-list-price">€58</span>
           </div>
           <div class="menu-list-item fade-in stagger-5">
             <div>
-              <h3 class="menu-list-name">Schweinebauch</h3>
-              <p class="menu-list-desc">Sous-vide gekocht mit knuspriger Kruste, Apfelmus und Linsen</p>
+              <h3 class="menu-list-name" data-i18n="menu.main6.name">Schweinebauch</h3>
+              <p class="menu-list-desc" data-i18n="menu.main6.desc">Sous-vide gekocht mit knuspriger Kruste, Apfelmus und Linsen</p>
             </div>
             <span class="menu-list-price">€48</span>
           </div>
         </div>
 
         <!-- Desserts -->
-        <h2 class="menu-section-title fade-in" style="margin-top: 80px;">Desserts</h2>
+        <h2 class="menu-section-title fade-in" data-i18n="menu.desserts" style="margin-top: 80px;">Desserts</h2>
         <div class="menu-list">
           <div class="menu-list-item fade-in">
             <div>
-              <h3 class="menu-list-name">Crème Brûlée</h3>
-              <p class="menu-list-desc">Mit Vanille aus Madagascar, karamellisierten Mandeln und Beeren</p>
+              <h3 class="menu-list-name" data-i18n="menu.dessert1.name">Crème Brûlée</h3>
+              <p class="menu-list-desc" data-i18n="menu.dessert1.desc">Mit Vanille aus Madagascar, karamellisierten Mandeln und Beeren</p>
             </div>
             <span class="menu-list-price">€18</span>
           </div>
           <div class="menu-list-item fade-in stagger-1">
             <div>
-              <h3 class="menu-list-name">Schokoladen-Mousse</h3>
-              <p class="menu-list-desc">70% dunkle Schokolade mit Olivenöl, Meersalz und Krokant</p>
+              <h3 class="menu-list-name" data-i18n="menu.dessert2.name">Schokoladen-Mousse</h3>
+              <p class="menu-list-desc" data-i18n="menu.dessert2.desc">70% dunkle Schokolade mit Olivenöl, Meersalz und Krokant</p>
             </div>
             <span class="menu-list-price">€22</span>
           </div>
           <div class="menu-list-item fade-in stagger-2">
             <div>
-              <h3 class="menu-list-name">Tarte Tatin</h3>
-              <p class="menu-list-desc">Warme Karamelltarte mit Vanilleeis und Sahne</p>
+              <h3 class="menu-list-name" data-i18n="menu.dessert3.name">Tarte Tatin</h3>
+              <p class="menu-list-desc" data-i18n="menu.dessert3.desc">Warme Karamelltarte mit Vanilleeis und Sahne</p>
             </div>
             <span class="menu-list-price">€16</span>
           </div>
           <div class="menu-list-item fade-in stagger-3">
             <div>
-              <h3 class="menu-list-name">Mille-feuille</h3>
-              <p class="menu-list-desc">Mit Vanillecreme, karamellisierten Blättern und Erdbeeren</p>
+              <h3 class="menu-list-name" data-i18n="menu.dessert4.name">Mille-feuille</h3>
+              <p class="menu-list-desc" data-i18n="menu.dessert4.desc">Mit Vanillecreme, karamellisierten Blättern und Erdbeeren</p>
             </div>
             <span class="menu-list-price">€20</span>
           </div>
           <div class="menu-list-item fade-in stagger-4">
             <div>
-              <h3 class="menu-list-name">Käseauswahl</h3>
-              <p class="menu-list-desc">Ausgewählte Käsespezialitäten mit Feigensenf und Nüssen</p>
+              <h3 class="menu-list-name" data-i18n="menu.dessert5.name">Käseauswahl</h3>
+              <p class="menu-list-desc" data-i18n="menu.dessert5.desc">Ausgewählte Käsespezialitäten mit Feigensenf und Nüssen</p>
             </div>
             <span class="menu-list-price">€24</span>
           </div>
         </div>
 
         <!-- Wine Selection -->
-        <h2 class="menu-section-title fade-in" style="margin-top: 80px;">Weinauswahl</h2>
+        <h2 class="menu-section-title fade-in" data-i18n="menu.wine" style="margin-top: 80px;">Weinauswahl</h2>
         <div class="menu-list">
           <div class="menu-list-item fade-in">
             <div>
-              <h3 class="menu-list-name">Château Margaux 2015</h3>
-              <p class="menu-list-desc">Bordeaux - Aromen von schwarzen Johannisbeeren, Veilchen und Zedernholz</p>
+              <h3 class="menu-list-name" data-i18n="menu.wine1.name">Château Margaux 2015</h3>
+              <p class="menu-list-desc" data-i18n="menu.wine1.desc">Bordeaux - Aromen von schwarzen Johannisbeeren, Veilchen und Zedernholz</p>
             </div>
             <span class="menu-list-price">€320</span>
           </div>
           <div class="menu-list-item fade-in stagger-1">
             <div>
-              <h3 class="menu-list-name">Dom Pérignon 2012</h3>
-              <p class="menu-list-desc">Champagner - Eleganz mit Noten von weißen Blüten und Zitrus</p>
+              <h3 class="menu-list-name" data-i18n="menu.wine2.name">Dom Pérignon 2012</h3>
+              <p class="menu-list-desc" data-i18n="menu.wine2.desc">Champagner - Eleganz mit Noten von weißen Blüten und Zitrus</p>
             </div>
             <span class="menu-list-price">€280</span>
           </div>
           <div class="menu-list-item fade-in stagger-2">
             <div>
-              <h3 class="menu-list-name">Petrus 2016</h3>
-              <p class="menu-list-desc">Pomerol - Intensives Bouquet von dunklen Früchten und Schokolade</p>
+              <h3 class="menu-list-name" data-i18n="menu.wine3.name">Petrus 2016</h3>
+              <p class="menu-list-desc" data-i18n="menu.wine3.desc">Pomerol - Intensives Bouquet von dunklen Früchten und Schokolade</p>
             </div>
             <span class="menu-list-price">€450</span>
           </div>
           <div class="menu-list-item fade-in stagger-3">
             <div>
-              <h3 class="menu-list-name">Riesling Spätlese</h3>
-              <p class="menu-list-desc">Mosel - Fruchtsüße mit feiner Säure, Aprikose und Mineralik</p>
+              <h3 class="menu-list-name" data-i18n="menu.wine4.name">Riesling Spätlese</h3>
+              <p class="menu-list-desc" data-i18n="menu.wine4.desc">Mosel - Fruchtsüße mit feiner Säure, Aprikose und Mineralik</p>
             </div>
             <span class="menu-list-price">€48</span>
           </div>
         </div>
 
         <div class="text-center fade-in" style="margin-top: 80px;">
-          <a href="reservation.html" class="btn btn-outline-light">Tisch reservieren</a>
+          <a href="reservation.html" class="btn btn-outline-light" data-i18n="menu.reserveBtn">Tisch reservieren</a>
         </div>
       </div>
     </div>
@@ -226,38 +231,38 @@
       <div class="footer-grid">
         <div class="footer-about">
           <div class="footer-logo">ÉTOI<span>LE</span></div>
-          <p class="footer-desc">
+          <p class="footer-desc" data-i18n="footer.desc">
             Wo kulinarische Kunst auf zeitlose Eleganz trifft. Wir freuen 
             uns darauf, Sie in unserem Restaurant willkommen zu heißen.
           </p>
         </div>
         <div class="footer-links">
-          <h4 class="footer-title">Navigation</h4>
+          <h4 class="footer-title" data-i18n="footer.nav">Navigation</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menü</a></li>
-            <li><a href="about.html">Über uns</a></li>
-            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="index.html" data-i18n="footer.home">Home</a></li>
+            <li><a href="menu.html" data-i18n="footer.menu">Menü</a></li>
+            <li><a href="about.html" data-i18n="footer.about">Über uns</a></li>
+            <li><a href="gallery.html" data-i18n="footer.gallery">Galerie</a></li>
           </ul>
         </div>
         <div class="footer-links">
-          <h4 class="footer-title">Information</h4>
+          <h4 class="footer-title" data-i18n="footer.info">Information</h4>
           <ul>
-            <li><a href="reservation.html">Reservierung</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-            <li><a href="#">Datenschutz</a></li>
-            <li><a href="#">Impressum</a></li>
+            <li><a href="reservation.html" data-i18n="footer.reservation">Reservierung</a></li>
+            <li><a href="contact.html" data-i18n="footer.contact">Kontakt</a></li>
+            <li><a href="#" data-i18n="footer.privacy">Datenschutz</a></li>
+            <li><a href="#" data-i18n="footer.imprint">Impressum</a></li>
           </ul>
         </div>
         <div class="footer-contact">
-          <h4 class="footer-title">Kontakt</h4>
-          <p>Luxemburger Straße 42<br>10117 Berlin</p>
-          <p>+49 30 12345678</p>
-          <p>reservierung@etoile.de</p>
+          <h4 class="footer-title" data-i18n="footer.contact">Kontakt</h4>
+          <p data-i18n="footer.address">Luxemburger Straße 42<br>10117 Berlin</p>
+          <p data-i18n="footer.phone">+49 30 12345678</p>
+          <p data-i18n="footer.email">reservierung@etoile.de</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copyright">© 2024 ÉTOILE Restaurant. Alle Rechte vorbehalten.</p>
+        <p class="footer-copyright" data-i18n="footer.copyright">© 2024 ÉTOILE Restaurant. Alle Rechte vorbehalten.</p>
         <div class="footer-social">
           <a href="#" aria-label="Instagram">IG</a>
           <a href="#" aria-label="Facebook">FB</a>
@@ -267,6 +272,8 @@
     </div>
   </footer>
 
+  <script src="js/translations.js"></script>
+  <script src="js/language.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

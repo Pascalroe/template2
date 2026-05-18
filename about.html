@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" id="html-root">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,15 +18,20 @@
       <div class="nav-inner">
         <a href="index.html" class="nav-logo">ÉTOI<span>LE</span></a>
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="menu.html">Menü</a></li>
-          <li><a href="about.html" class="active">Über uns</a></li>
-          <li><a href="gallery.html">Galerie</a></li>
-          <li><a href="reservation.html">Reservierung</a></li>
-          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="menu.html" data-i18n="nav.menu">Menü</a></li>
+          <li><a href="about.html" class="active" data-i18n="nav.about">Über uns</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Galerie</a></li>
+          <li><a href="reservation.html" data-i18n="nav.reservation">Reservierung</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
         </ul>
         <div class="nav-cta">
-          <a href="reservation.html" class="btn btn-outline-light">Tisch reservieren</a>
+          <a href="reservation.html" class="btn btn-outline-light" data-i18n="nav.reserve">Tisch reservieren</a>
+          <div id="lang-toggle" class="lang-switcher">
+            <span class="lang-de active">DE</span>
+            <span class="lang-sep">|</span>
+            <span class="lang-en">EN</span>
+          </div>
           <button class="nav-toggle" aria-label="Menü öffnen">
             <span></span>
             <span></span>
@@ -44,8 +49,8 @@
       <div class="hero-overlay"></div>
     </div>
     <div class="page-hero-content">
-      <span class="hero-subtitle">Unsere Geschichte</span>
-      <h1 class="page-hero-title">Über ÉTOILE</h1>
+      <span class="hero-subtitle" data-i18n="about.page.subtitle">Unsere Geschichte</span>
+      <h1 class="page-hero-title" data-i18n="about.page.title">Über ÉTOILE</h1>
     </div>
   </section>
 
@@ -57,20 +62,20 @@
           <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Restaurant Interior">
         </div>
         <div class="about-content">
-          <span class="signature-label fade-in">Philosophie</span>
-          <h2 class="fade-in stagger-1">Eine Geschichte der Excellence</h2>
-          <p class="fade-in stagger-2">
+          <span class="signature-label fade-in" data-i18n="about.philosophy.label">Philosophie</span>
+          <h2 class="fade-in stagger-1" data-i18n="about.philosophy.title">Eine Geschichte der Excellence</h2>
+          <p class="fade-in stagger-2" data-i18n="about.philosophy.text1">
             ÉTOILE wurde mit einer klaren Vision gegründet: Ein Restaurant zu schaffen, 
             das die Grenzen der kulinarischen Kunst neu definiert. Seit unserer Eröffnung 
             im Jahr 2015 stehen wir für unvergleichliche Qualität und kreative Innovation.
           </p>
-          <p class="fade-in stagger-3">
+          <p class="fade-in stagger-3" data-i18n="about.philosophy.text2">
             Unser Name, "Stern" auf Französisch, spiegelt unser Streben nach Sternenglanz 
             wider – nicht nur in der Küche, sondern in jedem Aspekt des Gästeerlebnisses. 
             Von der eleganten Einrichtung bis zum aufmerksamen Service widmen wir uns der 
             Schaffung von Momenten, die in Erinnerung bleiben.
           </p>
-          <p class="fade-in stagger-4">
+          <p class="fade-in stagger-4" data-i18n="about.philosophy.text3">
             Wir glauben daran, dass gutes Essen verbindet. Es erzählt Geschichten, weckt 
             Emotionen und schafft Erinnerungen. Bei ÉTOILE wird jeder Besuch zu einer 
             Reise durch die Welt der Haute Cuisine.
@@ -261,6 +266,8 @@
     </div>
   </footer>
 
+  <script src="js/translations.js"></script>
+  <script src="js/language.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

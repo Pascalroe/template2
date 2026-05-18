@@ -2,7 +2,78 @@
    ÉTOILE - JavaScript
    ============================================ */
 
+// ============================================
+// Language Switching (DE/EN)
+// ============================================
+let currentLang = localStorage.getItem('etoile-lang') || 'de';
+
+function t(key) {
+  if (translations[currentLang] && translations[currentLang][key]) {
+    return translations[currentLang][key];
+  }
+  // Fallback to German
+  if (translations['de'] && translations['de'][key]) {
+    return translations['de'][key];
+  }
+  return key;
+}
+
+function updateLanguage() {
+  // Update all elements with data-i18n attribute
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const translation = t(key);
+    
+    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+      if (el.placeholder !== undefined && key.includes('placeholder')) {
+        el.placeholder = translation;
+      }
+    } else if (el.innerHTML !== undefined) {
+      // Handle line breaks in translations
+      el.innerHTML = translation.replace(/<br>/g, '<br>');
+    }
+  });
+  
+  // Update html lang attribute
+  document.documentElement.lang = currentLang;
+  
+  // Update language switcher buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === currentLang);
+  });
+  
+  // Save to localStorage
+  localStorage.setItem('etoile-lang', currentLang);
+}
+
+function setLanguage(lang) {
+  if (typeof LanguageManager !== 'undefined') {
+    LanguageManager.setLanguage(lang);
+  } else {
+    currentLang = lang;
+    updateLanguage();
+  }
+}
+
+// Language toggle click handlers
 document.addEventListener('DOMContentLoaded', function() {
+  const langDe = document.querySelector('.lang-de');
+  const langEn = document.querySelector('.lang-en');
+  
+  if (langDe) {
+    langDe.style.cursor = 'pointer';
+    langDe.addEventListener('click', () => setLanguage('de'));
+  }
+  if (langEn) {
+    langEn.style.cursor = 'pointer';
+    langEn.addEventListener('click', () => setLanguage('en'));
+  }
+  
+  // Initialize existing LanguageManager if available
+  if (typeof LanguageManager !== 'undefined') {
+    LanguageManager.init();
+  }
+  
   // Navigation scroll effect
   const nav = document.querySelector('.nav');
   

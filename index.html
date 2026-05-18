@@ -18,15 +18,20 @@
       <div class="nav-inner">
         <a href="index.html" class="nav-logo">ÉTOI<span>LE</span></a>
         <ul class="nav-links">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="menu.html">Menü</a></li>
-          <li><a href="about.html">Über uns</a></li>
-          <li><a href="gallery.html">Galerie</a></li>
-          <li><a href="reservation.html">Reservierung</a></li>
-          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+          <li><a href="menu.html" data-i18n="nav.menu">Menü</a></li>
+          <li><a href="about.html" data-i18n="nav.about">Über uns</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Galerie</a></li>
+          <li><a href="reservation.html" data-i18n="nav.reservation">Reservierung</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
         </ul>
         <div class="nav-cta">
-          <a href="reservation.html" class="btn btn-outline-light">Tisch reservieren</a>
+          <div id="lang-toggle" class="lang-switcher">
+            <span class="lang-de active">DE</span>
+            <span class="lang-sep">|</span>
+            <span class="lang-en">EN</span>
+          </div>
+          <a href="reservation.html" class="btn btn-outline-light" data-i18n="nav.reserve">Tisch reservieren</a>
           <button class="nav-toggle" aria-label="Menü öffnen">
             <span></span>
             <span></span>
@@ -44,12 +49,12 @@
       <div class="hero-overlay"></div>
     </div>
     <div class="hero-content">
-      <span class="hero-subtitle">Fine Dining Paris</span>
-      <h1 class="hero-title">An Extraordinary<br>Fine Dining Experience</h1>
-      <p class="hero-text">Wo kulinarische Kunst auf zeitlose Eleganz trifft</p>
+      <span class="hero-subtitle" data-i18n="hero.subtitle">Fine Dining Paris</span>
+      <h1 class="hero-title" data-i18n="hero.title">An Extraordinary<br>Fine Dining Experience</h1>
+      <p class="hero-text" data-i18n="hero.text">Wo kulinarische Kunst auf zeitlose Eleganz trifft</p>
       <div class="hero-buttons">
-        <a href="reservation.html" class="btn btn-primary">Tisch reservieren</a>
-        <a href="menu.html" class="btn btn-outline-light">Menü entdecken</a>
+        <a href="reservation.html" class="btn btn-primary" data-i18n="hero.reserve">Tisch reservieren</a>
+        <a href="menu.html" class="btn btn-outline-light" data-i18n="hero.discover">Menü entdecken</a>
       </div>
     </div>
   </section>
@@ -62,19 +67,19 @@
           <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&q=80" alt="Kulinarische Kreation">
         </div>
         <div class="signature-content">
-          <span class="signature-label fade-in stagger-1">Das Erlebnis</span>
-          <h2 class="signature-title fade-in stagger-2">Signature Experience</h2>
-          <p class="signature-text fade-in stagger-3">
+          <span class="signature-label fade-in stagger-1" data-i18n="signature.label">Das Erlebnis</span>
+          <h2 class="signature-title fade-in stagger-2" data-i18n="signature.title">Signature Experience</h2>
+          <p class="signature-text fade-in stagger-3" data-i18n="signature.text1">
             Bei ÉTOILE verschmelzen französische Tradition mit modernster Kulinarik. 
             Unser Küchenchef kreiert jedes Gericht mit unerschütterlicher Hingabe 
             und verwandelt jedes Essen in ein unvergessliches Erlebnis.
           </p>
-          <p class="signature-text fade-in stagger-4">
+          <p class="signature-text fade-in stagger-4" data-i18n="signature.text2">
             Wir glauben daran, dass gutes Essen mehr ist als Nahrung – es ist 
             eine Geschichte, die erzählt wird. Jede Zutat wird sorgfältig ausgewählt, 
             jede Kreation mit Präzision und Leidenschaft zubereitet.
           </p>
-          <a href="about.html" class="btn btn-outline fade-in stagger-5">Mehr über uns</a>
+          <a href="about.html" class="btn btn-outline fade-in stagger-5" data-i18n="signature.link">Mehr über uns</a>
         </div>
       </div>
     </div>
@@ -84,13 +89,13 @@
   <section class="menu-section section">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Kulinarik</span>
-        <h2 class="section-title">Tasting Menu</h2>
-        <p class="section-desc">Ein 7-Gänge-Menü, das die Sinne verführt</p>
+        <span class="section-label" data-i18n="menu.label">Kulinarik</span>
+        <h2 class="section-title" data-i18n="menu.title">Tasting Menu</h2>
+        <p class="section-desc" data-i18n="menu.desc">Ein 7-Gänge-Menü, das die Sinne verführt</p>
       </div>
       <div class="menu-grid">
         <div class="menu-category fade-in">
-          <h3 class="menu-category-title">Amuse-Bouche</h3>
+          <h3 class="menu-category-title" data-i18n="menu.category.amuse">Amuse-Bouche</h3>
           <div class="menu-item">
             <div class="menu-item-header">
               <span class="menu-item-name">Tatar vom Wagyu</span>
@@ -107,7 +112,7 @@
           </div>
         </div>
         <div class="menu-category fade-in stagger-1">
-          <h3 class="menu-category-title">Hauptgerichte</h3>
+          <h3 class="menu-category-title" data-i18n="menu.category.mains">Hauptgerichte</h3>
           <div class="menu-item">
             <div class="menu-item-header">
               <span class="menu-item-name">Loup de Mer</span>
@@ -131,7 +136,7 @@
           </div>
         </div>
         <div class="menu-category fade-in stagger-2">
-          <h3 class="menu-category-title">Desserts</h3>
+          <h3 class="menu-category-title" data-i18n="menu.category.desserts">Desserts</h3>
           <div class="menu-item">
             <div class="menu-item-header">
               <span class="menu-item-name">Crème Brûlée</span>
@@ -149,7 +154,7 @@
         </div>
       </div>
       <div class="text-center" style="margin-top: 60px;">
-        <a href="menu.html" class="btn btn-outline">Vollständiges Menü</a>
+        <a href="menu.html" class="btn btn-outline" data-i18n="menu.viewAll">Vollständiges Menü</a>
       </div>
     </div>
   </section>
@@ -162,24 +167,24 @@
           <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=800&q=80" alt="Küchenchef">
         </div>
         <div class="chef-content">
-          <span class="signature-label fade-in stagger-1">Der Küchenchef</span>
-          <h2 class="signature-title fade-in stagger-2">Chefs Story</h2>
-          <blockquote class="chef-quote fade-in stagger-3">
+          <span class="signature-label fade-in stagger-1" data-i18n="chef.label">Der Küchenchef</span>
+          <h2 class="signature-title fade-in stagger-2" data-i18n="chef.title">Chefs Story</h2>
+          <blockquote class="chef-quote fade-in stagger-3" data-i18n="chef.quote">
             "Kochen ist für mich die höchste Form der Kunst. Jedes Gericht ist 
             eine Leinwand, auf der ich meine Vision verwirkliche."
           </blockquote>
-          <p class="signature-text fade-in stagger-4">
+          <p class="signature-text fade-in stagger-4" data-i18n="chef.text1">
             Mit über 20 Jahren Erfahrung in einigen der renommiertesten 
             Küchen der Welt hat unser Küchenchef eine einzigartige Stimme 
             in der modernen französischen Küche entwickelt.
           </p>
-          <p class="signature-text fade-in stagger-5">
+          <p class="signature-text fade-in stagger-5" data-i18n="chef.text2">
             Seine Philosophie basiert auf der Verbindung von klassischer 
             französischer Technik mit regionalen Zutaten und globalen Einflüssen.
           </p>
           <div class="fade-in stagger-5">
-            <p class="chef-name">Pierre Laurent</p>
-            <p class="chef-title">Executive Chef</p>
+            <p class="chef-name" data-i18n="chef.name">Pierre Laurent</p>
+            <p class="chef-title" data-i18n="chef.title2">Executive Chef</p>
           </div>
         </div>
       </div>
@@ -190,8 +195,8 @@
   <section class="gallery-preview section">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Einblicke</span>
-        <h2 class="section-title" style="color: var(--color-cream);">Galerie</h2>
+        <span class="section-label" data-i18n="gallery.label">Einblicke</span>
+        <h2 class="section-title" style="color: var(--color-cream);" data-i18n="gallery.title">Galerie</h2>
       </div>
       <div class="gallery-grid">
         <div class="gallery-item fade-in">
@@ -216,7 +221,7 @@
         </div>
       </div>
       <div class="text-center" style="margin-top: 60px;">
-        <a href="gallery.html" class="btn btn-outline-light">Zur Galerie</a>
+        <a href="gallery.html" class="btn btn-outline-light" data-i18n="gallery.link">Zur Galerie</a>
       </div>
     </div>
   </section>
@@ -225,30 +230,30 @@
   <section class="testimonials section">
     <div class="container">
       <div class="section-header">
-        <span class="section-label">Stimmen</span>
-        <h2 class="section-title">Bewertungen</h2>
+        <span class="section-label" data-i18n="testimonials.label">Stimmen</span>
+        <h2 class="section-title" data-i18n="testimonials.title">Bewertungen</h2>
       </div>
       <div class="testimonial-slider">
         <div class="testimonial-item">
-          <p class="testimonial-text">
+          <p class="testimonial-text" data-i18n="testimonial.1">
             "Ein unvergessliches kulinarisches Erlebnis. Jeder Bissen war 
             perfekt durchdacht und executed mit meisterhafter Präzision."
           </p>
-          <p class="testimonial-author">— Johann Müller, Gourmet Magazin</p>
+          <p class="testimonial-author" data-i18n="testimonial.1.author">— Johann Müller, Gourmet Magazin</p>
         </div>
         <div class="testimonial-item">
-          <p class="testimonial-text">
+          <p class="testimonial-text" data-i18n="testimonial.2">
             "ÉTOILE setzt neue Maßstäbe in der deutschen Fine-Dining-Szene. 
             Die Kombination aus Tradition und Innovation ist beeindruckend."
           </p>
-          <p class="testimonial-author">— Sarah Chen, Feinschmecker</p>
+          <p class="testimonial-author" data-i18n="testimonial.2.author">— Sarah Chen, Feinschmecker</p>
         </div>
         <div class="testimonial-item">
-          <p class="testimonial-text">
+          <p class="testimonial-text" data-i18n="testimonial.3">
             "Der beste Restaurantbesuch meines Lebens. Das Team um Pierre Laurent 
             versteht es, Gäste zu verzaubern."
           </p>
-          <p class="testimonial-author">— Marcus Weber, Sterne-Kritiker</p>
+          <p class="testimonial-author" data-i18n="testimonial.3.author">— Marcus Weber, Sterne-Kritiker</p>
         </div>
       </div>
     </div>
@@ -258,12 +263,12 @@
   <section class="cta-section">
     <div class="container">
       <div class="fade-in">
-        <h2 class="cta-title">Reservieren Sie Ihren Tisch</h2>
-        <p class="cta-text">
+        <h2 class="cta-title" data-i18n="cta.title">Reservieren Sie Ihren Tisch</h2>
+        <p class="cta-text" data-i18n="cta.text">
           Erleben Sie ein kulinarisches Meisterwerk. Wir freuen uns darauf, 
           Sie bei ÉTOILE willkommen zu heißen.
         </p>
-        <a href="reservation.html" class="btn btn-outline-light">Jetzt reservieren</a>
+        <a href="reservation.html" class="btn btn-outline-light" data-i18n="cta.button">Jetzt reservieren</a>
       </div>
     </div>
   </section>
@@ -274,38 +279,38 @@
       <div class="footer-grid">
         <div class="footer-about">
           <div class="footer-logo">ÉTOI<span>LE</span></div>
-          <p class="footer-desc">
+          <p class="footer-desc" data-i18n="footer.desc">
             Wo kulinarische Kunst auf zeitlose Eleganz trifft. Wir freuen 
             uns darauf, Sie in unserem Restaurant willkommen zu heißen.
           </p>
         </div>
         <div class="footer-links">
-          <h4 class="footer-title">Navigation</h4>
+          <h4 class="footer-title" data-i18n="footer.nav">Navigation</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menü</a></li>
-            <li><a href="about.html">Über uns</a></li>
-            <li><a href="gallery.html">Galerie</a></li>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="menu.html" data-i18n="nav.menu">Menü</a></li>
+            <li><a href="about.html" data-i18n="nav.about">Über uns</a></li>
+            <li><a href="gallery.html" data-i18n="nav.gallery">Galerie</a></li>
           </ul>
         </div>
         <div class="footer-links">
-          <h4 class="footer-title">Information</h4>
+          <h4 class="footer-title" data-i18n="footer.info">Information</h4>
           <ul>
-            <li><a href="reservation.html">Reservierung</a></li>
-            <li><a href="contact.html">Kontakt</a></li>
-            <li><a href="#">Datenschutz</a></li>
-            <li><a href="#">Impressum</a></li>
+            <li><a href="reservation.html" data-i18n="nav.reservation">Reservierung</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+            <li><a href="#" data-i18n="footer.privacy">Datenschutz</a></li>
+            <li><a href="#" data-i18n="footer.imprint">Impressum</a></li>
           </ul>
         </div>
         <div class="footer-contact">
-          <h4 class="footer-title">Kontakt</h4>
+          <h4 class="footer-title" data-i18n="footer.contact">Kontakt</h4>
           <p>Luxemburger Straße 42<br>10117 Berlin</p>
           <p>+49 30 12345678</p>
           <p>reservierung@etoile.de</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p class="footer-copyright">© 2024 ÉTOILE Restaurant. Alle Rechte vorbehalten.</p>
+        <p class="footer-copyright" data-i18n="footer.copyright">© 2024 ÉTOILE Restaurant. Alle Rechte vorbehalten.</p>
         <div class="footer-social">
           <a href="#" aria-label="Instagram">IG</a>
           <a href="#" aria-label="Facebook">FB</a>
@@ -315,6 +320,8 @@
     </div>
   </footer>
 
+  <script src="js/translations.js"></script>
+  <script src="js/language.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
