@@ -320,3 +320,35 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// ============================================
+// Keyboard Language Switch (D = Deutsch, E = English)
+// ============================================
+document.addEventListener('keydown', function(e) {
+  // Ignore if user is typing in an input or textarea
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || e.target.tagName === 'SELECT') {
+    return;
+  }
+  
+  // D key = Deutsch
+  if (e.key === 'd' || e.key === 'D') {
+    if (typeof LanguageManager !== 'undefined') {
+      LanguageManager.setLanguage('de');
+    } else {
+      currentLang = 'de';
+      localStorage.setItem('etoile-lang', 'de');
+      updateLanguage();
+    }
+  }
+  
+  // E key = English
+  if (e.key === 'e' || e.key === 'E') {
+    if (typeof LanguageManager !== 'undefined') {
+      LanguageManager.setLanguage('en');
+    } else {
+      currentLang = 'en';
+      localStorage.setItem('etoile-lang', 'en');
+      updateLanguage();
+    }
+  }
+});

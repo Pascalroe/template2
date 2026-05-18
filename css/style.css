@@ -1353,3 +1353,10 @@ p {
 .lang-switcher .lang-sep {
   color: var(--color-gray);
 }
+
+.lang-hint {
+  font-size: 0.7rem;
+  color: var(--color-gray);
+  margin-left: 4px;
+  opacity: 0.7;
+}
