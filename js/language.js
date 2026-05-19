@@ -224,19 +224,22 @@ const LanguageManager = {
   
   /**
    * Update language toggle UI
+   * Note: The flags are inverted - 🇩🇪 switches to EN, 🇬🇧 switches to DE
    */
   updateToggleUI() {
     const langToggle = document.getElementById('lang-toggle');
     if (langToggle) {
-      const deBtn = langToggle.querySelector('.lang-de');
-      const enBtn = langToggle.querySelector('.lang-en');
+      const deFlag = langToggle.querySelector('.lang-de');
+      const enFlag = langToggle.querySelector('.lang-en');
       
       if (this.currentLang === 'de') {
-        deBtn.classList.add('active');
-        enBtn.classList.remove('active');
+        // German is active - show 🇬🇧 as active (it switches to German)
+        deFlag.classList.remove('active');
+        enFlag.classList.add('active');
       } else {
-        deBtn.classList.remove('active');
-        enBtn.classList.add('active');
+        // English is active - show 🇩🇪 as active (it switches to English)
+        deFlag.classList.add('active');
+        enFlag.classList.remove('active');
       }
     }
   }
@@ -246,12 +249,27 @@ const LanguageManager = {
 document.addEventListener('DOMContentLoaded', function() {
   LanguageManager.init();
   
-  // Add click handler for language switcher
+  // Add click handlers for individual language flags
   const langToggle = document.getElementById('lang-toggle');
   if (langToggle) {
-    langToggle.addEventListener('click', function() {
-      LanguageManager.toggle();
-    });
+    const deFlag = langToggle.querySelector('.lang-de');
+    const enFlag = langToggle.querySelector('.lang-en');
+    
+    // German flag (🇩🇪) switches to English
+    if (deFlag) {
+      deFlag.addEventListener('click', function(e) {
+        e.stopPropagation();
+        LanguageManager.setLanguage('en');
+      });
+    }
+    
+    // English flag (🇬🇧) switches to German
+    if (enFlag) {
+      enFlag.addEventListener('click', function(e) {
+        e.stopPropagation();
+        LanguageManager.setLanguage('de');
+      });
+    }
   }
 });
 
