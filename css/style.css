@@ -1323,12 +1323,11 @@ p {
 .lang-switcher {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   cursor: pointer;
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  letter-spacing: 0.05em;
   padding: 8px 12px;
   border-radius: 4px;
   transition: background-color var(--transition-fast);
@@ -1341,7 +1340,13 @@ p {
 .lang-switcher .lang-de,
 .lang-switcher .lang-en {
   color: var(--color-gray-light);
-  transition: color var(--transition-fast);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  line-height: 1;
+}
+
+.lang-switcher .lang-de:hover,
+.lang-switcher .lang-en:hover {
+  transform: scale(1.2);
 }
 
 .lang-switcher .lang-de.active,
@@ -1352,4 +1357,5 @@ p {
 
 .lang-switcher .lang-sep {
   color: var(--color-gray);
+  font-size: 1rem;
 }
